@@ -503,4 +503,11 @@ async def kuni(
     await inter.response.send_message(embed=embed)
     
 # Ejecutar bot
-bot.run("OTQ4MDQzNDg2ODk1MTY1NDUw.Gu7NJ0.sZ_B8y4Pnk9X6RikskV1GmlIivASV9KrGeZwM0")
+
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+TOKEN = os.getenv("DISCORD_TOKEN")
+
+bot.run(TOKEN)
