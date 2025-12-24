@@ -1,7 +1,3 @@
-import os
-import disnake
-from disnake.ext import commands
-
 from flask import Flask
 from threading import Thread
 
@@ -17,6 +13,14 @@ def run():
 def keep_alive():
     t = Thread(target=run)
     t.start()
+
+import os
+import disnake
+from disnake.ext import commands
+
+from flask import Flask
+from threading import Thread
+
 
 # Activar intents
 intents = disnake.Intents.default()
@@ -528,3 +532,4 @@ TOKEN = os.getenv("DISCORD_TOKEN")
 
 keep_alive()
 bot.run(TOKEN)
+
